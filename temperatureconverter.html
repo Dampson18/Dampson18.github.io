@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter | Kelvin Dampson</title>
+    
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .converter {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 1.1em;
+            color: #333;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function celsiusToFahrenheit() {
+            const celsius = parseFloat(document.getElementById("celsiusInput").value);
+            if (!isNaN(celsius)) {
+                const fahrenheit = (celsius * (9 / 5)) + 32;
+                const kelvin = celsius + 273.15;
+                document.getElementById("fahrenheitOutput").innerText = fahrenheit.toFixed(2) + " °F";
+                document.getElementById("kelvinOutput").innerText = kelvin.toFixed(2) + " K";
+            } else {
+                document.getElementById("fahrenheitOutput").innerText = "Please enter a valid number.";
+                document.getElementById("kelvinOutput").innerText = "";
+            }
+        }
+
+        function fahrenheitToCelsius() {
+            const fahrenheit = parseFloat(document.getElementById("fahrenheitInput").value);
+            if (!isNaN(fahrenheit)) {
+                const celsius = (fahrenheit - 32) * (5 / 9);
+                const kelvin = celsius + 273.15;
+                document.getElementById("celsiusOutput").innerText = celsius.toFixed(2) + " °C";
+                document.getElementById("kelvinFromFOutput").innerText = kelvin.toFixed(2) + " K";
+            } else {
+                document.getElementById("celsiusOutput").innerText = "Please enter a valid number.";
+                document.getElementById("kelvinFromFOutput").innerText = "";
+            }
+        }
+
+        function kelvinToCelsius() {
+            const kelvin = parseFloat(document.getElementById("kelvinInput").value);
+            if (!isNaN(kelvin)) {
+                const celsius = kelvin - 273.15;
+                const fahrenheit = (celsius * (9 / 5)) + 32;
+                document.getElementById("kelvinOutputFromC").innerText = celsius.toFixed(2) + " °C";
+                document.getElementById("fahrenheitFromKOutput").innerText = fahrenheit.toFixed(2) + " °F";
+            } else {
+                document.getElementById("kelvinOutputFromC").innerText = "Please enter a valid number.";
+                document.getElementById("fahrenheitFromKOutput").innerText = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+    
+    <div class="converter">
+        <h3>Celsius to Fahrenheit and Kelvin</h3>
+        <p>Enter temperature in Celsius:</p>
+        <input type="number" id="celsiusInput" placeholder="°C">
+        <button onclick="celsiusToFahrenheit()">Convert</button>
+        <p id="fahrenheitOutput"></p>
+        <p id="kelvinOutput"></p>
+    </div>
+
+    <div class="converter">
+        <h3>Fahrenheit to Celsius and Kelvin</h3>
+        <p>Enter temperature in Fahrenheit:</p>
+        <input type="number" id="fahrenheitInput" placeholder="°F">
+        <button onclick="fahrenheitToCelsius()">Convert</button>
+        <p id="celsiusOutput"></p>
+        <p id="kelvinFromFOutput"></p>
+    </div>
+
+    <div class="converter">
+        <h3>Kelvin to Celsius and Fahrenheit</h3>
+        <p>Enter temperature in Kelvin:</p>
+        <input type="number" id="kelvinInput" placeholder="K">
+        <button onclick="kelvinToCelsius()">Convert</button>
+        <p id="kelvinOutputFromC"></p>
+        <p id="fahrenheitFromKOutput"></p>
+    </div>
+
+    <footer>
+        Author: Kelvin Dampson
+    </footer>
+
+    <div class="description">
+        <h4>Project Description:</h4>
+        <p>This temperature converter allows you to convert temperatures between Celsius, Fahrenheit, and Kelvin.</p>
+        <p>It provides real-time feedback and is designed to be user-friendly.</p>
+        <p>Technologies used: HTML, CSS, JavaScript.</p>
+    </div>
+</body>
+</html>
