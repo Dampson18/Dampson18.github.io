@@ -33,34 +33,38 @@
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-    }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333; /* Background color for the nav */
+}
 
-    .nav-links {
-        list-style: none;
-        display: flex;
-    }
+.nav-links {
+    list-style: none;
+    display: flex;
+}
 
-    .nav-links li {
-        margin-left: 20px;
-    }
+.nav-links li {
+    margin-left: 20px;
+}
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s, transform 0.3s;
-        font-weight: bold;
-    }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s; /* Added transition for background */
+    font-weight: bold;
+    padding: 10px 15px; /* Added padding for better click area */
+    border-radius: 5px; /* Optional: rounded corners */
+}
 
-    .nav-links a:hover {
-        color: #ffdd57;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        transform: scale(1.1);
-    }
+.nav-links a:hover {
+    color: #ffdd57;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: rgba(255, 221, 87, 0.2); /* Background color on hover */
+}
 
     .hero {
         padding: 50px 20px;
@@ -113,21 +117,21 @@
         transform: scale(1.05); /* Scale image on hover */
     }
 
-    .service-card {
-        background: white;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-        display: inline-block;
-        width: 30%;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+   .service-card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-    }
+.service-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Added scale for size change */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
 
     footer {
         background: #333;
