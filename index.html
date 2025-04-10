@@ -7,224 +7,292 @@
     <meta name="description" content="PRINCEWISE FINANCIAL INVESTMENT CONSULT offers expert financial advice and tools to help you manage your finances.">
     <meta name="keywords" content="affiliate marketing, financial planning, data analysis, investment, asset management, budgeting">
     <title>PRINCEWISE FINANCIAL INVESTMENT CONSULT</title>
-	<link rel="icon" href="princewise.ico" type="image/x-icon">
+	<link rel="icon" href="images/princewise.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINCEWISE FINANCIAL INVESTMENT CONSULT</title>
+    <meta name="author" content="Kelvin Dampson">
+    <link rel="icon" href="princewise.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        background-color: #f0f0f0;
-        color: #333;
-        padding: 0 10px;
-    }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
 
-    header {
-        background: #007bff;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+header {
+    background: linear-gradient(135deg, #002244, #005792);
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
 
-  nav {
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    background-color: #333; /* Background color for the nav */
+    padding: 0 30px;
+    background: #002244;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffcc00;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s, background-color 0.3s; /* Added transition for background */
-    font-weight: bold;
-    padding: 10px 15px; /* Added padding for better click area */
-    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #ffdd57;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-    background-color: rgba(255, 221, 87, 0.2); /* Background color on hover */
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffcc00;
+    transform: scale(1.05);
 }
 
-    .hero {
-        padding: 50px 20px;
-        text-align: center;
-    }
+.hero {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
 
-    .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
+.hero h1 {
+    font-size: 3rem;
+    color: #002244;
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-in;
+}
 
-    .hero p {
-        margin: 20px 0;
-        font-size: 1.1rem;
-    }
+.hero p {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
 
-    .cta {
-        background: #ffdd57;
-        color: #333;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s, transform 0.3s;
-    }
+.cta {
+    background: linear-gradient(135deg, #ffc107, #ffdd57);
+    color: #000;
+    padding: 14px 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
 
-    .cta:hover {
-        background: #ffd700;
-        transform: scale(1.05);
-    }
+.cta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
 
-    main {
-        padding: 20px;
-    }
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fb;
+}
 
-    section {
-        margin: 40px 0;
-        text-align: center;
-    }
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #002244;
+}
 
-    section img {
-        width: 100%; /* Full width of the container */
-        height: 200px; /* Fixed height */
-        object-fit: cover; /* Ensures aspect ratio is maintained */
-        border-radius: 10px;
-        margin-bottom: 20px;
-        transition: transform 0.3s;
-    }
-
-    section img:hover {
-        transform: scale(1.05); /* Scale image on hover */
-    }
-
-   .service-card {
+.service-card {
     background: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     display: inline-block;
     width: 30%;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease-in-out;
 }
 
 .service-card:hover {
-    transform: translateY(-5px) scale(1.05); /* Added scale for size change */
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-    footer {
-        background: #333;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #005792;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #002244;
+    font-size: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #005792;
+    box-shadow: 0 0 6px rgba(0, 87, 146, 0.3);
+}
+
+footer {
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 12px;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: #ffdd57;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
     }
 
-    form {
-        max-width: 600px;
-        margin: 40px auto;
-        background: #f7f7f7;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    input, textarea {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
         font-size: 1rem;
-        color: #333;
-        transition: border-color 0.3s ease, box-shadow 0.3s;
     }
 
-    input:focus, textarea:focus {
-        border-color: #007bff;
-        outline: none;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    .cta {
+        padding: 12px 20px;
+        font-size: 1rem;
     }
+}
 
-    button.cta {
-        width: 100%;
-        background: #0056b3;
-        color: white;
-        padding: 15px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background 0.3s ease, transform 0.3s;
-    }
+#about p, #contact p {
+    background: #f9fbfe;
+    border-left: 2px solid green;
+    border-radius: 2px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 10px auto;
+    max-width: 800px;
+    color: #2c3e50;
+    font-size: 1.05rem;
+    line-height: 1.7;
+	background-color: #e7f58d;
+	font-family: verdana, sans-serif;
+}
 
-    button.cta:hover {
-        background: #007bff;
-        transform: scale(1.05);
-    }
+#about p {
+    margin-bottom: 15px;
+}
 
-    .social-media {
-        margin-top: 10px;
-    }
 
-    .social-media a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 1.5rem;
-        transition: color 0.3s, transform 0.3s;
-    }
+</head>
 
-    .social-media a:hover {
-        color: #ffdd57;
-        transform: scale(1.2);
-    }
-
-    @media (max-width: 768px) {
-        .service-card {
-            width: 90%;
-        }
-    }
-
-    #about, #contact {
-        font-family: 'Georgia', serif;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 20px 0;
-    }
-</style>
 
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="princewise.ico" alt="Company Logo" style="width: 50px; vertical-align: middle;">PRINCEWISE FINANCIAL INVESTMENT CONSULT</div>
+            <div class="logo"><img src="images/princewise.ico" alt="Company Logo" style="width: 50px; vertical-align: middle;">PRINCEWISE FINANCIAL INVESTMENT CONSULT</div>
 			<ul class="nav-links">
                 <li><a href="#services" aria-label="Services">Services</a></li>
                 <li><a href="#about" aria-label="About Us">About Us</a></li>
@@ -243,32 +311,32 @@
             <h2>Our Services</h2>
             <div class="service-container">
                 <div class="service-card">
-                    <img src="affiliate_marketing.jpg" alt="Affiliate Marketing">
+                    <img src="images/affiliate_marketing.jpg" alt="Affiliate Marketing">
                     <h3>Affiliate Marketing</h3>
                     <p>Promote products and earn commissions through our affiliate marketing program.</p>
                 </div>
                 <div class="service-card">
-                    <img src="product_promotion.jpg" alt="Product Promotion">
+                    <img src="images/product_promotion.jpg" alt="Product Promotion">
                     <h3>Product Promotion</h3>
                     <p>Boost the visibility of your products through strategic promotion.</p>
                 </div>
                 <div class="service-card">
-                    <img src="financial_investment.jpg" alt="Financial Investment Planning">
+                    <img src="images/financial_investment.jpg" alt="Financial Investment Planning">
                     <h3>Financial Investment Planning</h3>
                     <p>Comprehensive investment plans designed for your financial success.</p>
                 </div>
                 <div class="service-card">
-                    <img src="data_analysis.png" alt="Data Analysis">
+                    <img src="images/data_analysis.png" alt="Data Analysis">
                     <h3>Data Analysis</h3>
                     <p>Leverage data insights to improve your business or financial decisions.</p>
                 </div>
                 <div class="service-card">
-                    <img src="assets.png" alt="Depreciated and Appreciated Asset">
+                    <img src="images/assets.png" alt="Depreciated and Appreciated Asset">
                     <h3>Depreciated and Appreciated Assets</h3>
                     <p>Manage your assets effectively to maximize value.</p>
                 </div>
                 <div class="service-card">
-                    <img src="budget.jpg" alt="Budgeting of Income Generation">
+                    <img src="images/budget.jpg" alt="Budgeting of Income Generation">
                     <h3>Budgeting of Income Generation</h3>
                     <p>Plan and control your finances for optimal income generation.</p>
                 </div>
@@ -277,14 +345,14 @@
 
         <section id="about">
             <h2>About Us</h2>
-            <img src="about.jpg" alt="About Us">
+            <img src="images/about.jpg" alt="About Us">
             <p>At PRINCEWISE FINANCIAL INVESTMENT CONSULT, we are dedicated to providing expert financial services to help you secure your future. Our mission is to ensure that everyone has the financial education and control they need to thrive.</p>
             <p>Whether you need help with affiliate marketing, product promotion, financial investment planning, or budgeting, we are here to assist you.</p>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <img src="contact.jpg" alt="Contact Us">
+            <img src="images/contact.jpg" alt="Contact Us">
 			<p>Duration Fee: First week of every month</p>
             <p>If you have any questions or need personalized financial advice, we're here to help. Please fill out the form below, and a member of our team will get back to you as soon as possible.</p>
             <form id="contact-form">
@@ -303,7 +371,7 @@
                     <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
                 </div>
                 
-                <button type="submit" class="cta">Send Message</button>
+                <button type="submit" class="cta"><a href="mailto:op9202782@gmail.com" style="text-decoration: none">Send Message</a></button>
             </form>
         </section>
     </main>
