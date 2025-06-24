@@ -3,351 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Kelvin Dampson">
-    <meta name="description" content="PRINCEWISE FINANCIAL INVESTMENT CONSULT offers expert financial advice and tools to help you manage your finances.">
-    <meta name="keywords" content="affiliate marketing, financial planning, data analysis, investment, asset management, budgeting">
-    <title>PRINCEWISE FINANCIAL INVESTMENT CONSULT</title>
-	<link rel="icon" href="princewise.ico" type="image/x-icon">
+    <meta name="author" content="Kelvin Dampson">
+    <meta name="description" content="PRINCEWISE FINANCIAL INVESTMENT CONSULT offers expert financial advice and innovative solutions to help you achieve lasting financial security. Specializing in investment planning, asset management, and strategic financial growth.">
+    <meta name="keywords" content="financial planning, investment, asset management, wealth management, financial advice, budgeting, affiliate marketing, data analysis, financial security, Ghana financial consultant">
+    <title>PRINCEWISE FINANCIAL INVESTMENT CONSULT | Your Partner for Financial Growth</title>
+    <link rel="icon" href="princewise.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        /* General Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
-    color: #2c3e50;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #F8FAFC; /* A very subtle light blue-grey */
+            color: #334155; /* Deep charcoal grey for text */
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
 
-header {
-    background: linear-gradient(135deg, #002244, #005792);
-    color: #ffffff;
-    padding: 40px 0;
-    text-align: center;
-    animation: fadeIn 2s ease;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-header h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-}
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #0A192F, #173A5E); /* Dark professional blues */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+        }
 
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    font-style: italic;
-    color: #e0e0e0;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            background: #0A192F; /* Matching the darker header blue */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    background: #002244;
-}
+        .logo {
+            font-family: 'Merriweather', serif; /* Serif font for a classic, trustworthy feel */
+            font-weight: 700;
+            font-size: 1.7rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #FFD700; /* Rich gold accent */
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffcc00;
-    letter-spacing: 1px;
-}
+        .logo img {
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+            border: 2px solid #FFD700; /* Gold border for the logo */
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px; /* Increased gap */
+        }
 
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    font-weight: 500;
-}
+        .nav-links a {
+            color: #E0E7EB; /* Lighter white for navigation links */
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            overflow: hidden; /* For underline animation */
+        }
 
-.nav-links a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffcc00;
-    transform: scale(1.05);
-}
+        /* Underline effect for navigation */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: #FFD700; /* Gold underline */
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease-in-out;
+        }
 
-.hero {
-    padding: 60px 20px;
-    background: #ffffff;
-    text-align: center;
-}
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #002244;
-    margin-bottom: 15px;
-    animation: slideIn 1s ease-in;
-}
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #FFD700;
+            transform: translateY(-2px);
+        }
 
-.hero p {
-    font-size: 1.25rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 25px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 90px 20px;
+            background: #ffffff;
+            text-align: center;
+            border-bottom: 5px solid #0A192F;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.cta {
-    background: linear-gradient(135deg, #ffc107, #ffdd57);
-    color: #000;
-    padding: 14px 30px;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 4rem; /* Larger, more impactful heading */
+            color: #0A192F;
+            margin-bottom: 25px;
+            animation: slideIn 1.2s ease-out;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
 
-.cta:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
+        .hero p {
+            font-size: 1.45rem; /* Larger, more readable intro text */
+            color: #5F738C; /* Softer dark grey */
+            max-width: 950px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
 
-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f8f9fb;
-}
+        .cta {
+            background: linear-gradient(135deg, #FFD700, #F0C400); /* Richer gold gradient */
+            color: #0A192F; /* Dark blue text on gold button */
+            padding: 18px 40px; /* More substantial button */
+            font-weight: bold;
+            border: none;
+            border-radius: 40px; /* More rounded */
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-size: 1.25rem;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            letter-spacing: 0.5px;
+        }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #002244;
-}
+        .cta:hover {
+            transform: translateY(-6px) scale(1.02); /* More dynamic hover */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            background: linear-gradient(135deg, #F0C400, #FFD700);
+        }
 
-.service-card {
-    background: white;
-    display: inline-block;
-    width: 30%;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease-in-out;
-}
+        /* Sections */
+        section {
+            padding: 90px 20px; /* Increased padding */
+            text-align: center;
+            background-color: #F8FAFC;
+        }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
+        section:nth-of-type(even) {
+            background-color: #EFF3F7; /* Slightly darker light blue-grey */
+        }
 
-.service-card h3 {
-    font-size: 1.4rem;
-    color: #005792;
-    margin-bottom: 10px;
-}
+        section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 3.2rem; /* Larger section titles */
+            margin-bottom: 45px;
+            color: #0A192F;
+            position: relative;
+            display: inline-block;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+        }
 
-.service-card p {
-    font-size: 1rem;
-    color: #444;
-}
+        section h2::after {
+            content: '';
+            display: block;
+            width: 100px; /* Wider underline */
+            height: 5px; /* Thicker underline */
+            background: #FFD700;
+            margin: 20px auto 0;
+            border-radius: 3px;
+        }
 
-section img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
+        /* Services Section */
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px; /* Increased gap */
+            max-width: 1280px; /* Wider container */
+            margin: 0 auto;
+        }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
-}
+        .service-card {
+            background: white;
+            width: calc(33% - 40px); /* Adjust for 3 cards per row with increased gap */
+            padding: 35px; /* More padding */
+            border-radius: 18px; /* More rounded corners */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12); /* Softer, wider shadow */
+            transition: 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #E0E7EB; /* Subtle border */
+        }
 
-form h2 {
-    margin-bottom: 20px;
-    color: #002244;
-    font-size: 1.5rem;
-}
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* More significant lift effect */
+        }
 
-input, textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-}
+        .service-card img {
+            width: 100%;
+            max-width: 280px; /* Larger image size */
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 3px solid #E0E7EB; /* Thicker, softer border */
+        }
 
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #005792;
-    box-shadow: 0 0 6px rgba(0, 87, 146, 0.3);
-}
+        .service-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.9rem;
+            color: #173A5E; /* Darker blue for service titles */
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-footer {
-    background: #002244;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 0.95rem;
-}
+        .service-card p {
+            font-size: 1.1rem;
+            color: #5F738C;
+            line-height: 1.7;
+        }
 
-footer p {
-    margin-bottom: 10px;
-}
+        /* About & Contact Sections */
+        #about img, #contact img {
+            width: 100%;
+            max-width: 700px; /* Larger images */
+            height: auto;
+            border-radius: 20px; /* More rounded */
+            margin-bottom: 40px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18); /* Stronger shadow */
+            border: 3px solid #E0E7EB;
+        }
 
-.social-media a {
-    color: white;
-    margin: 0 12px;
-    font-size: 1.6rem;
-    transition: 0.3s;
-}
+        #about p, #contact p {
+            background: #ffffff;
+            border-left: 6px solid #173A5E; /* Thicker, darker blue accent */
+            border-radius: 10px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin: 25px auto; /* Increased margin */
+            max-width: 950px;
+            color: #334155;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            font-family: 'Lato', sans-serif;
+            text-align: left;
+        }
 
-.social-media a:hover {
-    color: #ffdd57;
-    transform: scale(1.2);
-}
+        /* Contact Form */
+        form {
+            max-width: 750px; /* Wider form */
+            margin: 50px auto 0;
+            background: #ffffff;
+            padding: 50px; /* More padding */
+            border-radius: 20px; /* More rounded */
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+            text-align: left;
+            border: 1px solid #E0E7EB;
+        }
 
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
+        form h2 {
+            margin-bottom: 35px;
+            color: #0A192F;
+            font-size: 2.2rem; /* Larger form title */
+            text-align: center;
+        }
 
-@keyframes slideIn {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
+        .form-group {
+            margin-bottom: 30px; /* Increased spacing between fields */
+        }
 
-@media (max-width: 768px) {
-    .service-card {
-        width: 90%;
-    }
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 700; /* Bolder labels */
+            color: #334155;
+            font-size: 1.15rem;
+        }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
-    }
+        input, textarea {
+            width: 100%;
+            padding: 18px; /* More padding */
+            border: 1px solid #CBD5E1; /* Softer border */
+            border-radius: 10px; /* More rounded */
+            font-size: 1.05rem;
+            font-family: 'Lato', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
+        }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #173A5E; /* Darker blue on focus */
+            box-shadow: 0 0 12px rgba(23, 58, 94, 0.25); /* Professional glow */
+        }
 
-    .hero p {
-        font-size: 1rem;
-    }
+        form button.cta {
+            width: auto;
+            margin-top: 30px; /* Increased margin */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .cta {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-}
+        /* Footer */
+        footer {
+            background: #0A192F;
+            color: #E0E7EB;
+            text-align: center;
+            padding: 35px; /* More padding */
+            font-size: 0.95rem;
+            border-top: 6px solid #FFD700;
+        }
 
-#about p, #contact p {
-    background: #f9fbfe;
-    border-left: 2px solid green;
-    border-radius: 2px;
-    padding: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin: 10px auto;
-    max-width: 800px;
-    color: #2c3e50;
-    font-size: 1.05rem;
-    line-height: 1.7;
-	background-color: #e7f58d;
-	font-family: verdana, sans-serif;
-}
+        footer p {
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
 
-#about p {
-    margin-bottom: 15px;
-}
+        .social-media {
+            margin-top: 25px;
+        }
 
+        .social-media a {
+            color: #E0E7EB;
+            margin: 0 18px; /* Increased spacing */
+            font-size: 2rem; /* Larger icons */
+            transition: 0.3s ease-in-out;
+            display: inline-block;
+        }
 
-</head>
+        .social-media a:hover {
+            color: #FFD700;
+            transform: scale(1.4) translateY(-4px); /* More pronounced effect */
+        }
 
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
 
+        @keyframes slideIn {
+            0% { transform: translateX(-150px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .service-card {
+                width: calc(50% - 35px); /* 2 cards per row on medium screens */
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            section h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 25px;
+            }
+            .logo {
+                margin-bottom: 25px;
+                font-size: 1.5rem;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            .nav-links a {
+                padding: 12px 20px;
+                text-align: center;
+                border: 1px solid rgba(255,255,255,0.1); /* subtle border for mobile nav items */
+            }
+            .nav-links a::after {
+                height: 2px;
+                background: none; /* disable underline for stacked links */
+            }
+            .nav-links a:hover::after,
+            .nav-links a.active::after {
+                width: 0; /* ensure no underline on hover for mobile */
+            }
+            .hero {
+                padding: 70px 15px;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero p {
+                font-size: 1.25rem;
+            }
+            .cta {
+                padding: 16px 30px;
+                font-size: 1.15rem;
+            }
+            section {
+                padding: 60px 15px;
+            }
+            section h2 {
+                font-size: 2.5rem;
+            }
+            .service-card {
+                width: 95%; /* Single card per row on small screens */
+            }
+            #about p, #contact p {
+                padding: 25px;
+                font-size: 1.05rem;
+            }
+            form {
+                padding: 35px;
+            }
+            form h2 {
+                font-size: 2rem;
+            }
+            input, textarea {
+                padding: 15px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .logo {
+                font-size: 1.3rem;
+                gap: 10px;
+            }
+            .logo img {
+                width: 45px; height: 45px;
+            }
+            section h2 {
+                font-size: 2.1rem;
+            }
+            .social-media a {
+                font-size: 1.7rem;
+                margin: 0 12px;
+            }
+            .cta {
+                padding: 14px 25px;
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="princewise.ico" alt="Company Logo" style="width: 50px; vertical-align: middle;">PRINCEWISE FINANCIAL INVESTMENT CONSULT</div>
-			<ul class="nav-links">
-                <li><a href="#services" aria-label="Services">Services</a></li>
+            <div class="logo"><img src="princewise.ico" alt="Company Logo" style="width: 60px; height: 60px; object-fit: contain;">PRINCEWISE FINANCIAL INVESTMENT CONSULT</div>
+            <ul class="nav-links">
+                <li><a href="#services" aria-label="Our Services">Services</a></li>
                 <li><a href="#about" aria-label="About Us">About Us</a></li>
-                <li><a href="#contact" aria-label="Contact">Contact</a></li>
+                <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Your Financial Security, Our Priority</h1>
-            <p>Expert advice and tools to help you manage your finances.</p>
-            <a href="#services" class="cta">Get Started</a>
+            <h1>Empowering Your Financial Future</h1>
+            <p>At PRINCEWISE, we offer expert financial guidance and innovative strategies to help you achieve lasting financial security and growth.</p>
+            <a href="#services" class="cta">Discover Our Solutions</a>
         </div>
     </header>
 
     <main>
         <section id="services">
-            <h2>Our Services</h2>
+            <h2>Our Comprehensive Services</h2>
             <div class="service-container">
                 <div class="service-card">
                     <img src="affiliate_marketing.jpg" alt="Affiliate Marketing">
-                    <h3>Affiliate Marketing</h3>
-                    <p>Promote products and earn commissions through our affiliate marketing program.</p>
+                    <h3>Strategic Affiliate Marketing</h3>
+                    <p>Unlock new revenue streams by partnering with us. We optimize your affiliate strategies for maximum reach and conversion, helping you grow your income efficiently.</p>
                 </div>
                 <div class="service-card">
                     <img src="product_promotion.jpg" alt="Product Promotion">
-                    <h3>Product Promotion</h3>
-                    <p>Boost the visibility of your products through strategic promotion.</p>
+                    <h3>Effective Product Promotion</h3>
+                    <p>Amplify your product's visibility and market penetration. Our tailored promotion strategies ensure your offerings reach the right audience, driving demand and sales.</p>
                 </div>
                 <div class="service-card">
                     <img src="financial_investment.jpg" alt="Financial Investment Planning">
-                    <h3>Financial Investment Planning</h3>
-                    <p>Comprehensive investment plans designed for your financial success.</p>
+                    <h3>Personalized Investment Planning</h3>
+                    <p>Build a robust financial future with our expert investment planning. We create customized strategies aligned with your goals, risk tolerance, and long-term aspirations.</p>
                 </div>
                 <div class="service-card">
                     <img src="data_analysis.png" alt="Data Analysis">
-                    <h3>Data Analysis</h3>
-                    <p>Leverage data insights to improve your business or financial decisions.</p>
+                    <h3>Insightful Financial Data Analysis</h3>
+                    <p>Transform raw data into actionable financial insights. Our advanced data analysis helps you make informed decisions, optimize performance, and identify growth opportunities.</p>
                 </div>
                 <div class="service-card">
-                    <img src="assets.png" alt="Depreciated and Appreciated Asset">
-                    <h3>Depreciated and Appreciated Assets</h3>
-                    <p>Manage your assets effectively to maximize value.</p>
+                    <img src="assets.png" alt="Depreciated and Appreciated Asset Management">
+                    <h3>Strategic Asset Management</h3>
+                    <p>Maximize the value of your assets, whether appreciating or depreciating. We provide comprehensive management solutions to optimize your portfolio and enhance wealth.</p>
                 </div>
                 <div class="service-card">
                     <img src="budget.jpg" alt="Budgeting of Income Generation">
-                    <h3>Budgeting of Income Generation</h3>
-                    <p>Plan and control your finances for optimal income generation.</p>
+                    <h3>Optimized Income Generation Budgeting</h3>
+                    <p>Take control of your financial flow. Our budgeting services help you meticulously plan and manage your income and expenses to achieve financial stability and growth.</p>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <h2>About Us</h2>
-            <img src="about.jpg" alt="About Us">
-            <p>At PRINCEWISE FINANCIAL INVESTMENT CONSULT, we are dedicated to providing expert financial services to help you secure your future. Our mission is to ensure that everyone has the financial education and control they need to thrive.</p>
-            <p>Whether you need help with affiliate marketing, product promotion, financial investment planning, or budgeting, we are here to assist you.</p>
+            <h2>About PRINCEWISE Financial Investment Consult</h2>
+            <img src="about.jpg" alt="About Us - Team collaboration and financial growth">
+            <p>At PRINCEWISE FINANCIAL INVESTMENT CONSULT, our passion is to empower individuals and businesses with the financial intelligence and tools they need to thrive in a dynamic economic landscape. We believe that everyone deserves clarity and control over their financial destiny.</p>
+            <p>Founded on principles of integrity, expertise, and client-centricity, we go beyond conventional advice. We are committed to demystifying complex financial concepts and providing practical, tailored solutions that pave the way for sustainable financial security and wealth creation. Your financial success is the cornerstone of our mission.</p>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <img src="contact.jpg" alt="Contact Us">
-			<p>Duration Fee: First week of every month</p>
-            <p>If you have any questions or need personalized financial advice, we're here to help. Please fill out the form below, and a member of our team will get back to you as soon as possible.</p>
+            <h2>Connect With Us</h2>
+            <img src="contact.jpg" alt="Contact Us - Professional consultation">
+            <p>We are eager to assist you on your financial journey. Whether you have specific questions about our services or require personalized financial advice, please don't hesitate to reach out. Our team is ready to provide the guidance you need.</p>
+            <p>Please note: Our consultation fees are typically billed during the first week of every month for ongoing services. We are transparent about our pricing and committed to delivering exceptional value.</p>
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
@@ -361,10 +551,10 @@ footer p {
                 
                 <div class="form-group">
                     <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
                 </div>
                 
-                <button type="submit" class="cta"><a href="mailto:op9202782@gmail.com" style="text-decoration: none">Send Message</a></button>
+                <button type="submit" class="cta">Send Message</button>
             </form>
         </section>
     </main>
@@ -388,31 +578,81 @@ footer p {
             </div>
         </div>
     </footer>
-	    <script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
-            console.log("Finance Hub Loaded!");
+            console.log("PRINCEWISE Financial Hub Loaded!");
 
             const form = document.getElementById('contact-form');
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault(); // Prevent default form submission
 
-                // Retrieve form data
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
 
                 // Basic validation
                 if (name === '' || email === '' || message === '') {
-                    alert("All fields are required!");
+                    alert("All fields are required to send your message.");
                     return;
                 }
 
-                // Simulate sending the form data
-                console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+                // More robust email validation (optional but recommended)
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
 
-                // Optionally reset the form after submission
-                form.reset();
-                alert("Thank you for your message! We'll get back to you soon.");
+                // Simulate sending data - in a real-world scenario, you'd send this to a backend
+                console.log(`Sending message: Name: ${name}, Email: ${email}, Message: ${message}`);
+
+                try {
+                    // Example of a placeholder for a real API call:
+                    // const response = await fetch('/api/contact', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify({ name, email, message }),
+                    // });
+                    // if (response.ok) {
+                    //     alert("Thank you for your message! We'll get back to you soon.");
+                    //     form.reset();
+                    // } else {
+                    //     alert("There was an error sending your message. Please try again later.");
+                    // }
+
+                    // For now, simulating success directly:
+                    alert("Thank you for your message! We'll get back to you soon.");
+                    form.reset();
+
+                } catch (error) {
+                    console.error("Submission error:", error);
+                    alert("There was an issue sending your message. Please try again or contact us directly via email/phone.");
+                }
+            });
+
+            // Active link highlighting
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    // Adjust this value based on when you want the nav link to become active
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
             });
         });
     </script>
